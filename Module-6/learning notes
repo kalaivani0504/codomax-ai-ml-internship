@@ -1,0 +1,47 @@
+# Module 06 – Final AI & ML Project Learning Notes
+
+## 1. What is the project?
+
+The AI-Based Job Scam Risk Detector is a Python application that analyses job-posting text and classifies it as potentially suspicious or lower-risk using a trained machine learning model.
+
+## 2. What problem does the project address?
+
+Fake job postings may mislead job seekers through fraudulent offers, upfront payment requests, or misleading employment information. This project aims to provide an initial risk assessment of job-posting text.
+
+## 3. Which technologies are used?
+
+- Python
+- Pandas
+- Scikit-learn
+- TF-IDF Vectorizer
+- Logistic Regression
+- Joblib
+- Regular Expressions
+
+## 4. What is TF-IDF?
+
+TF-IDF stands for Term Frequency–Inverse Document Frequency. It converts text into numerical features that a machine learning model can process.
+
+## 5. Why is Logistic Regression used?
+
+Logistic Regression is a classification algorithm used to predict a class based on input features. In this project, it classifies job-posting text using TF-IDF features.
+
+## 6. What is the role of the trained model?
+
+The trained model analyses the numerical features generated from the job-posting text and predicts a class based on patterns learned during training.
+
+## 7. What is the purpose of rule-based warnings?
+
+Rule-based checks identify predefined warning patterns, such as requests for registration fees or upfront payments. These checks operate separately from the machine learning model.
+
+## 8. What did I learn from this project?
+
+I learned how to prepare text data, train and evaluate a machine learning model, save and load model components, build a Python application, and document a project using GitHub.
+
+## 9. What are the limitations?
+
+The model may produce false positives or false negatives. Its performance depends on the training data, and its predictions do not guarantee whether a job is genuine or fraudulent.
+
+## 10. What are the future improvements?
+
+Possible improvements include creating a web interface, testing on additional datasets, improving error handling, and adding more robust model evaluation.
