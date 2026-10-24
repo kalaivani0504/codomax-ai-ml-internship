@@ -1,1 +1,59 @@
 
+# AI-Based Job Scam Risk Detector
+
+## Overview
+
+This project is developed as part of the Codomax AI & ML Internship, Module 5: AI Tools & Mini Project.
+
+The application uses a trained Machine Learning model to classify job postings as potentially suspicious or lower-risk. It also checks for selected warning indicators and provides general job-search safety recommendations.
+
+## Features
+
+- Machine Learning-based job posting classification
+- Text processing using TF-IDF
+- Potential warning indicator detection
+- Safety recommendations
+- Model probability estimate
+- User input validation
+
+## Technologies Used
+
+- Python
+- Pandas
+- Scikit-learn
+- TF-IDF
+- Logistic Regression
+- Joblib
+
+## How It Works
+
+1. The user enters a job description.
+2. The TF-IDF vectorizer transforms the text.
+3. The trained Machine Learning model predicts a class.
+4. The application checks selected warning patterns.
+5. The application displays the prediction and safety recommendations.
+
+## How to Run
+
+1. Install Python.
+2. Download the trained model and TF-IDF vectorizer files.
+3. Place both files in the same folder as `app.py`.
+4. Install the required libraries:
+
+   `pip install -r requirements.txt`
+
+5. Run the application:
+
+   `python app.py`
+
+## Limitations
+
+- The model depends on the data used during training.
+- Warning patterns cover only selected examples.
+- A lower-risk classification does not guarantee that a job is genuine.
+- A potentially suspicious classification does not prove fraud.
+- Model probability estimates are not guaranteed to represent real-world risk.
+
+## Internship
+
+Codomax AI & ML Internship — Module 5: AI Tools & Mini Project.
