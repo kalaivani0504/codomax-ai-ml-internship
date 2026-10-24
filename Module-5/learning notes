@@ -1,0 +1,611 @@
+# Codomax AI & ML Internship
+## Module 5: AI Tools & Mini Project
+### Project: AI-Based Job Scam Risk Detector Using Machine Learning
+
+---
+
+## 1. Project Introduction
+
+### Q1. What is the title of my project?
+
+**Answer:**
+
+My project title is **AI-Based Job Scam Risk Detector Using Machine Learning**.
+
+The application analyses job posting text and predicts whether a job posting may be suspicious or belongs to a lower-risk category. It also identifies selected warning indicators and provides job-search safety recommendations.
+
+### Q2. Why did I choose this project?
+
+**Answer:**
+
+I chose this project because fraudulent job postings can mislead job seekers and cause financial or privacy risks.
+
+My goal is to learn how Machine Learning and text processing can help identify potentially suspicious job postings.
+
+This project also allows me to practise Python programming, data preprocessing, Machine Learning, model evaluation, and application development.
+
+### Q3. What problem does this project solve?
+
+**Answer:**
+
+Job seekers may encounter postings that contain suspicious payment requests, misleading promises, or requests for sensitive information.
+
+My application provides an automated risk assessment based on the patterns learned by a Machine Learning model. It also highlights selected warning indicators and suggests ways to verify job opportunities.
+
+However, the application cannot guarantee that a job is genuine or fraudulent.
+
+### Q4. What are the main objectives of this project?
+
+**Answer:**
+
+The main objectives are:
+
+1. Understand how AI tools support software development.
+2. Apply Machine Learning to job posting classification.
+3. Process job descriptions using Natural Language Processing techniques.
+4. Identify selected warning indicators in job descriptions.
+5. Display risk predictions and safety recommendations.
+6. Improve my Python programming and debugging skills.
+7. Document and share my learning journey.
+
+---
+
+## 2. AI Tools Used
+
+### Q5. Which AI tool did I use during this project?
+
+**Answer:**
+
+I used ChatGPT as a learning and development assistant.
+
+I used it to understand programming concepts, generate example code, troubleshoot errors, improve my application, and prepare project documentation.
+
+### Q6. How did ChatGPT help me with coding?
+
+**Answer:**
+
+ChatGPT helped me understand how to structure the project and implement different features.
+
+I used its guidance to work with Python, Scikit-learn, TF-IDF, Logistic Regression, model saving, input validation, and job posting risk prediction.
+
+I also used ChatGPT to understand error messages and learn how to resolve problems by running the required notebook cells in the correct order.
+
+### Q7. How did I use AI tools for research and learning?
+
+**Answer:**
+
+I used ChatGPT to learn the purpose of Machine Learning libraries and understand the steps involved in developing a text classification application.
+
+It helped me understand the difference between model predictions, warning indicators, and safety recommendations.
+
+I also learned that AI-generated code should be reviewed, tested, and understood before using it in a project.
+
+### Q8. What are the limitations of using AI tools for coding?
+
+**Answer:**
+
+AI tools can sometimes generate incorrect, incomplete, or unsuitable code.
+
+They may also provide explanations that do not fully match a particular project's implementation.
+
+Therefore, I learned to check the generated code, run it, examine errors, and verify whether the application behaves as expected.
+
+### Q9. Did I integrate ChatGPT or another generative AI API into my application?
+
+**Answer:**
+
+No. In the current version, I used ChatGPT to support my development and learning process, but I did not integrate an external generative AI API into the application.
+
+The application's main prediction comes from a trained Machine Learning model. The warning indicators are checked using predefined text patterns.
+
+This distinction is important because using ChatGPT during development is different from integrating a generative AI model into an application.
+
+---
+
+## 3. Machine Learning Concepts
+
+### Q10. What is Machine Learning?
+
+**Answer:**
+
+Machine Learning is a branch of Artificial Intelligence that enables computers to learn patterns from data and use those patterns to make predictions.
+
+In my project, the model learns patterns from labelled job posting data and predicts a category for a new job description.
+
+### Q11. What is Natural Language Processing (NLP)?
+
+**Answer:**
+
+Natural Language Processing is a field of Artificial Intelligence that helps computers process and analyse human language.
+
+In my project, NLP-related text processing techniques help convert job descriptions into numerical features that a Machine Learning model can use.
+
+### Q12. What is TF-IDF?
+
+**Answer:**
+
+TF-IDF stands for Term Frequency–Inverse Document Frequency.
+
+It is a text representation technique that converts text into numerical features.
+
+It considers how frequently a term appears in a document and how informative that term is across a collection of documents.
+
+In my project, I used `TfidfVectorizer` from Scikit-learn to convert job posting text into numerical features.
+
+### Q13. Why did I use TF-IDF?
+
+**Answer:**
+
+Machine Learning algorithms generally require numerical input rather than raw text.
+
+TF-IDF transforms job descriptions into numerical representations, allowing the model to learn patterns from the text.
+
+I used the vectorizer's `fit_transform()` method on the training text and its `transform()` method on the test text.
+
+### Q14. What is Logistic Regression?
+
+**Answer:**
+
+Logistic Regression is a Machine Learning algorithm commonly used for classification tasks.
+
+It estimates probabilities for possible classes and assigns a predicted class according to its classification rule.
+
+In my project, I used Logistic Regression to classify job postings into two categories:
+
+- `0` — Genuine job posting according to the dataset label.
+- `1` — Fraudulent job posting according to the dataset label.
+
+These labels represent the dataset's classifications and do not guarantee the actual status of a new job posting.
+
+### Q15. Why did I use Logistic Regression?
+
+**Answer:**
+
+I selected Logistic Regression because it is a commonly used classification algorithm and provides a suitable starting point for a beginner-friendly text classification project.
+
+It works with the numerical text features generated by TF-IDF and can be evaluated using standard classification metrics.
+
+### Q16. What is training data?
+
+**Answer:**
+
+Training data is the portion of a dataset used to teach a Machine Learning model.
+
+In my project, I used the training portion of the labelled job posting dataset to train the Logistic Regression model.
+
+### Q17. What is testing data?
+
+**Answer:**
+
+Testing data is a separate portion of the dataset used to evaluate a trained model on examples that were not used to fit the model.
+
+I used a train-test split to evaluate the model on unseen test examples.
+
+### Q18. What is the purpose of `train_test_split()`?
+
+**Answer:**
+
+The `train_test_split()` function from Scikit-learn divides data into separate training and testing sets.
+
+I used an 80:20 split, with 80% of the data for training and 20% for testing.
+
+I also used `random_state=42` to make the split reproducible and `stratify=y` to preserve the approximate class proportions in both sets.
+
+### Q19. What is model evaluation?
+
+**Answer:**
+
+Model evaluation is the process of measuring how well a trained model performs on test data.
+
+I evaluated my model using accuracy, precision, recall, F1-score, and a confusion matrix.
+
+These metrics help me understand different types of correct and incorrect predictions.
+
+### Q20. What is accuracy?
+
+**Answer:**
+
+Accuracy measures the proportion of all predictions that are correct.
+
+My model achieved an accuracy of **96.88%** on the test dataset.
+
+This means that 96.88% of the predictions in that evaluation were correct.
+
+However, accuracy alone does not establish that the model will perform equally well on new job postings.
+
+### Q21. What is precision?
+
+**Answer:**
+
+Precision measures the proportion of postings predicted as fraudulent that were actually labelled fraudulent in the test data.
+
+It helps evaluate how often a fraudulent prediction is correct according to the dataset labels.
+
+### Q22. What is recall?
+
+**Answer:**
+
+Recall measures the proportion of actual fraudulent postings in the test data that the model correctly identified.
+
+My model achieved a fraudulent-job recall of **0.81, or 81%**.
+
+This indicates that the model identified approximately 81% of the fraudulent postings in the test set.
+
+It also indicates that some fraudulent postings were missed.
+
+### Q23. What is the F1-score?
+
+**Answer:**
+
+The F1-score combines precision and recall into a single metric using their harmonic mean.
+
+It is useful when evaluating a classification model where both false alarms and missed fraudulent postings matter.
+
+### Q24. What is a confusion matrix?
+
+**Answer:**
+
+A confusion matrix summarises the model's predictions compared with the actual labels.
+
+For my binary classification project, it helps identify:
+
+- True positives: Fraudulent postings correctly predicted as fraudulent.
+- True negatives: Genuine postings correctly predicted as genuine.
+- False positives: Genuine postings incorrectly predicted as fraudulent.
+- False negatives: Fraudulent postings incorrectly predicted as genuine.
+
+Understanding these errors is important for improving the reliability of the application.
+
+### Q25. What does `class_weight="balanced"` do?
+
+**Answer:**
+
+The `class_weight="balanced"` setting adjusts the model's class weights based on the class frequencies in the training data.
+
+It can help the model pay more attention to underrepresented classes.
+
+However, it does not guarantee better performance. The results must still be evaluated using appropriate metrics.
+
+### Q26. What is model probability?
+
+**Answer:**
+
+A model probability is the probability estimate assigned by a classifier to a particular class.
+
+My application displays the estimated probability associated with its predicted class.
+
+This value should not be interpreted as a guaranteed real-world probability that a job is fraudulent. Probability calibration and further validation would be needed before making that interpretation.
+
+---
+
+## 4. Application Features
+
+### Q27. What are the main features of my application?
+
+**Answer:**
+
+My application includes the following features:
+
+1. Job description input.
+2. Machine Learning-based job posting classification.
+3. Model probability estimate.
+4. Detection of selected warning indicators.
+5. Safety recommendations for job seekers.
+6. Input validation.
+7. An explanation of the application's limitations.
+
+### Q28. How does the application work?
+
+**Answer:**
+
+The application follows these steps:
+
+1. The user enters a job description.
+2. The saved TF-IDF vectorizer converts the text into numerical features.
+3. The trained Logistic Regression model predicts a class.
+4. The application checks the text for selected warning patterns.
+5. The application displays the prediction, possible warning indicators, and safety recommendations.
+
+### Q29. What are warning indicators?
+
+**Answer:**
+
+Warning indicators are patterns that may suggest a job posting requires additional verification.
+
+My application checks for selected examples, including:
+
+- Possible upfront payment requests.
+- Certain job guarantee claims.
+- Requests to share sensitive information, such as passwords or OTPs.
+
+These checks use predefined text patterns. They are not a comprehensive scam detection system.
+
+### Q30. Are warning indicators the same as Machine Learning predictions?
+
+**Answer:**
+
+No. They are separate components.
+
+The Machine Learning model predicts a class based on patterns learned from its training data.
+
+The warning indicator function checks the input text against predefined regular expressions.
+
+The application displays both results to provide additional context. A warning indicator does not automatically change the Machine Learning model's prediction.
+
+### Q31. What safety recommendations does the application provide?
+
+**Answer:**
+
+The application recommends that users:
+
+1. Verify the vacancy on the company's official website.
+2. Check the recruiter's identity and official email address.
+3. Be cautious about requests for recruitment fees.
+4. Never share passwords or OTPs with recruiters.
+5. Verify the employer independently before proceeding.
+
+These recommendations encourage users to investigate job opportunities before trusting them.
+
+### Q32. Can my application guarantee that a job is genuine or fraudulent?
+
+**Answer:**
+
+No. The application provides an automated risk assessment, not a definitive verification service.
+
+A lower-risk prediction does not prove that a job is genuine, and a potentially suspicious prediction does not prove fraud.
+
+Users should independently verify the employer, vacancy, and recruitment process.
+
+---
+
+## 5. Model Saving and Application Development
+
+### Q33. Why did I save the trained model?
+
+**Answer:**
+
+I saved the trained model so that it could be reused without training it again every time the application starts.
+
+I used Joblib to save the model as a file named `job_scam_model.pkl`.
+
+### Q34. Why did I save the TF-IDF vectorizer?
+
+**Answer:**
+
+The TF-IDF vectorizer stores the vocabulary and configuration learned during training.
+
+The same fitted vectorizer must be used when transforming new job descriptions so that their numerical features are compatible with the trained model.
+
+I saved it as `tfidf_vectorizer.pkl`.
+
+### Q35. What is Joblib?
+
+**Answer:**
+
+Joblib is a Python library that can save and load Python objects, including many trained Machine Learning models.
+
+I used `joblib.dump()` to save my trained model and vectorizer.
+
+I used `joblib.load()` in my application to load them.
+
+Pickle-based model files should only be loaded from trusted sources because loading an untrusted file can execute malicious code.
+
+### Q36. What files are used in my application?
+
+**Answer:**
+
+The application uses the following files:
+
+- `app.py` — contains the application code.
+- `requirements.txt` — lists the required Python packages.
+- `job_scam_model.pkl` — stores the trained Machine Learning model.
+- `tfidf_vectorizer.pkl` — stores the fitted TF-IDF vectorizer.
+- `README.md` — explains the project, features, installation, and limitations.
+- `learning-notes.md` — documents my learning journey and technical understanding.
+
+### Q37. What is the purpose of `requirements.txt`?
+
+**Answer:**
+
+The `requirements.txt` file lists the Python packages required to run the application.
+
+It helps another user install the necessary dependencies using:
+
+`pip install -r requirements.txt`
+
+For reproducible deployment, compatible package versions should be recorded and tested.
+
+---
+
+## 6. Challenges Faced During Development
+
+### Q38. What challenges did I face while developing the project?
+
+**Answer:**
+
+One challenge was understanding how the different stages of the Machine Learning workflow connect to one another.
+
+I had to ensure that the dataset was loaded, cleaned, and prepared before creating the TF-IDF features and training the model.
+
+I also needed to understand how the trained model and vectorizer could be saved and reused in a separate Python application.
+
+### Q39. How did I resolve the error where `model` and `tfidf` were not defined?
+
+**Answer:**
+
+I received an error because the trained model and vectorizer variables were not available in the current Python session.
+
+I resolved the problem by running the required notebook cells again in the correct order, including the cells that created the vectorizer and trained the model.
+
+After the variables became available, I successfully saved both files.
+
+### Q40. How did I test the application?
+
+**Answer:**
+
+I ran the Python application and checked whether it could load the saved model and vectorizer.
+
+I also checked whether the application accepted a job description and displayed a risk prediction, warning indicators, and safety recommendations.
+
+Additional testing with different genuine and fraudulent examples is necessary to evaluate its behaviour more thoroughly.
+
+### Q41. How did AI tools help me solve development problems?
+
+**Answer:**
+
+ChatGPT helped me understand error messages, identify the likely cause of problems, and follow the steps needed to resolve them.
+
+I used the explanations to understand how variables, model training, text vectorization, and saved files work together.
+
+This process helped me practise debugging and learn the importance of executing code in the correct order.
+
+---
+
+## 7. What I Learned
+
+### Q42. What did I learn from this project?
+
+**Answer:**
+
+Through this project, I learned about:
+
+1. The basic Machine Learning workflow.
+2. Preparing and cleaning a labelled dataset.
+3. Converting text into numerical features using TF-IDF.
+4. Training a Logistic Regression classifier.
+5. Separating training data from testing data.
+6. Evaluating a model using accuracy, precision, recall, F1-score, and a confusion matrix.
+7. Saving and loading a trained model with Joblib.
+8. Building a Python application around a Machine Learning model.
+9. Identifying potential warning indicators using predefined text patterns.
+10. Using ChatGPT to support coding, debugging, and learning.
+11. Documenting project features, limitations, and development steps.
+
+### Q43. How can AI tools improve productivity?
+
+**Answer:**
+
+AI tools can help developers understand unfamiliar concepts, generate example code, troubleshoot errors, brainstorm solutions, and prepare documentation.
+
+They can reduce the time needed to explore possible solutions, but their output still needs to be checked and tested.
+
+Developers should understand the code they use and avoid relying on AI-generated output without verification.
+
+### Q44. What skills did I practise?
+
+**Answer:**
+
+I practised Python programming, text preprocessing, Machine Learning, model evaluation, debugging, application development, and technical documentation.
+
+I also improved my ability to break a project into smaller tasks and complete them step by step.
+
+### Q45. How can this project help my future career?
+
+**Answer:**
+
+This project gives me practical experience with Python, Scikit-learn, text classification, and the development of a small Machine Learning application.
+
+It also provides an opportunity to demonstrate my problem-solving skills, explain technical decisions, and document my work for future projects and interviews.
+
+---
+
+## 8. Project Limitations
+
+### Q46. What are false positives?
+
+**Answer:**
+
+A false positive occurs when the model predicts that a job posting is fraudulent even though the dataset labels it as genuine.
+
+This may cause a user to become unnecessarily suspicious of a legitimate job opportunity.
+
+### Q47. What are false negatives?
+
+**Answer:**
+
+A false negative occurs when the model predicts that a job posting is genuine even though the dataset labels it as fraudulent.
+
+This is an important risk because a user might trust a suspicious posting.
+
+### Q48. What are the limitations of my dataset?
+
+**Answer:**
+
+The model's performance depends on the quality, coverage, and labels of its training dataset.
+
+The dataset may not represent all current job scams, industries, languages, or recruitment methods.
+
+The model may perform differently on new job descriptions that differ from its training examples.
+
+### Q49. What are the limitations of the warning indicator feature?
+
+**Answer:**
+
+The warning indicator feature uses predefined text patterns.
+
+It can miss suspicious wording that does not match those patterns, and it may flag legitimate descriptions that contain similar phrases.
+
+It does not independently verify company identities, websites, or job offers.
+
+### Q50. How can I improve the project in the future?
+
+**Answer:**
+
+Possible improvements include:
+
+1. Testing the model on additional unseen job postings.
+2. Evaluating false positives and false negatives.
+3. Improving the dataset's coverage and quality.
+4. Exploring additional text classification models.
+5. Adding a user-friendly web interface.
+6. Providing clearer explanations of model predictions.
+7. Adding trusted company verification resources.
+8. Recording package versions for reproducible deployment.
+9. Protecting user-submitted job descriptions and personal information.
+10. Testing the application for reliability and security.
+
+---
+
+## 9. Conclusion
+
+### Q51. What is the final conclusion of my project?
+
+**Answer:**
+
+The AI-Based Job Scam Risk Detector helped me understand how Machine Learning and text processing can be applied to a practical problem.
+
+I used TF-IDF to convert job posting text into numerical features and Logistic Regression to classify job postings. I also added selected warning indicator checks and safety recommendations.
+
+My model achieved 96.88% accuracy and 0.81 recall for the fraudulent class on the test dataset. These results provide an initial evaluation, but further testing is required before drawing conclusions about real-world performance.
+
+This project improved my understanding of Python, Machine Learning, model evaluation, debugging, and the use of AI tools during software development.
+
+I plan to continue improving the application and explore a web interface in a future phase.
+
+---
+
+## 10. Project Summary
+
+**Project Name:** AI-Based Job Scam Risk Detector
+
+**Internship:** Codomax AI & ML Internship — Module 5
+
+**Programming Language:** Python
+
+**Machine Learning Algorithm:** Logistic Regression
+
+**Text Processing Technique:** TF-IDF
+
+**Supporting Library:** Scikit-learn
+
+**Model Saving Library:** Joblib
+
+**Model Accuracy:** 96.88% on the test dataset
+
+**Fraudulent-Class Recall:** 81% on the test dataset
+
+**AI Tool Used During Development:** ChatGPT
+
+**Main Features:** Job posting classification, selected warning indicator detection, and safety recommendations.
+
+**Future Enhancement:** A user-friendly web interface and more comprehensive model evaluation.
