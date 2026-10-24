@@ -204,11 +204,7 @@ Add a screenshot showing the warning indicators and safety recommendations displ
 
 Suggested file path:
 
-`Module-6/screenshots/app-output-2.png`
-
-![Application Output 2](screenshots/app-output-2.png)
-
-**Note:** Replace these placeholders with actual screenshots captured from your application. Ensure the image filenames and paths match the files uploaded to GitHub.
+Module-6/app_output-2.png.png
 
 ## 10.Limitations
 
