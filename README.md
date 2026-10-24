@@ -98,8 +98,6 @@ Throughout this internship, I have been developing my programming skills, explor
 
 **Learning Outcome:** Applied machine learning concepts in a practical application and learned how AI tools can support software development.
 
-> Note: ChatGPT was used as a development assistant. An external generative AI API is not integrated into the application.
-
 ## Featured Project: AI-Based Job Scam Risk Detector
 
 ### Project Overview
