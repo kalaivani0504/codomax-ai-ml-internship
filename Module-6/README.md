@@ -196,9 +196,7 @@ Add a screenshot showing the application running and displaying a prediction.
 
 Suggested file path:
 
-`Module-6/screenshots/app-output-1.png`
-
-![Application Output 1](screenshots/app-output-1.png)
+Module-6/app_output-1.png.png
 
 ### Screenshot 2: Warning Indicators and Safety Recommendations
 
